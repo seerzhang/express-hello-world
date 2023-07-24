@@ -1,4 +1,5 @@
 const express = require('express')
+const router = express.Router();
 const path = require("path");
 const app = express()
 const fs = require('fs')
@@ -24,6 +25,10 @@ var options = {
   redirect: false
 }
 app.use(express.static('public', options))
+
+router.get('/', (req, res) => {
+  res.send('hello world!');
+})
 
 // #############################################################################
 // Catch all handler for all other request.
