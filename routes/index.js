@@ -6,14 +6,14 @@
  */
 const express = require('express')
 const router = express.Router()
-const fs = require('fs')
+// const fs = require('fs')
 // const jwt = require('jsonwebtoken')
 
 /* 前台 */
-router.get('/', function(req, res, next) {
+router.get('/a', function(req, res, next) {
     // res.render('index', { title: '首页'});
    // let data = fs.readFile('./../views/index/index.html')
-    res.send('hello world');
+    res.send('hello world-indexapi');
 });
 
 

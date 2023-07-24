@@ -1,8 +1,10 @@
 const express = require('express')
-const router = express.Router();
 const path = require("path");
 const app = express()
 const fs = require('fs')
+
+// 路由模块
+const indexRouter = require('./routes');
 
 // #############################################################################
 // Logs all request paths and method
@@ -12,6 +14,7 @@ app.use(function (req, res, next) {
   console.log(`[${new Date().toISOString()}] ${req.ip} ${req.method} ${req.path}`);
   next();
 });
+
 
 // #############################################################################
 // This configures static hosting for files in /public that have the extensions
@@ -24,11 +27,11 @@ var options = {
   maxAge: '1m',
   redirect: false
 }
-app.use(express.static('public', options))
+// app.use(express.static('public', options))
+app.use(express.static(path.join(__dirname, 'public')));
 
-router.get('/', (req, res) => {
-  res.send('hello world!');
-})
+app.use(indexRouter);
+
 
 // #############################################################################
 // Catch all handler for all other request.
