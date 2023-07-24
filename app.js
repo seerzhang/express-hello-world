@@ -7,7 +7,7 @@ const fs = require('fs')
 
 
 // 路由模块
-const indexRouter = require('./routes');
+// const indexRouter = require('./routes');
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
