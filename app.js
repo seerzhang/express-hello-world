@@ -10,9 +10,9 @@ const fs = require('fs')
 const indexRouter = require('./routes');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.engine('.html', require('ejs').__express);
-app.set('view engine', 'html');
+// app.set('views', path.join(__dirname, 'views'));
+// app.engine('.html', require('ejs').__express);
+// app.set('view engine', 'html');
 
 //
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log/access.log'), {flags: 'a'});
