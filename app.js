@@ -2,29 +2,6 @@ const express = require('express')
 const path = require("path");
 const app = express()
 const fs = require('fs')
-// const cookieParser = require('cookie-parser')
-// const logger = require('morgan')
-
-
-// 路由模块
-// const indexRouter = require('./routes');
-
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.engine('.html', require('ejs').__express);
-// app.set('view engine', 'html');
-
-//
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log/access.log'), {flags: 'a'});
-// app.use(logger('combined', {stream: accessLogStream}));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'public')));
-
-// router
-// app.use(indexRouter);
-
 
 // #############################################################################
 // Logs all request paths and method
