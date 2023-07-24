@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // router
-app.use(indexRouter);
+// app.use(indexRouter);
 
 
 // #############################################################################
